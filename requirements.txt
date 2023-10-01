@@ -1,2 +1,3 @@
 nltk
 streamlit
+sklearn.feature_extraction.text
