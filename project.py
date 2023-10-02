@@ -1,9 +1,12 @@
 import streamlit as st
+from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
 import string
 from nltk.corpus import stopwords
 import nltk
 from nltk.stem.porter import PorterStemmer
+
+Tfidf = TfidfVectorizer()
 
 ps = PorterStemmer()
 
@@ -33,7 +36,7 @@ def transform_text(text):
     return " ".join(y)
 
 
-Tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
+#Tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 model = pickle.load(open('model.pkl', 'rb'))
 
 st.title("Email/SMS Spam Classifier")
