@@ -38,7 +38,7 @@ Tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 model = pickle.load(open('model.pkl', 'rb'))
 
 st.title("Data Science Project by Nij")
-st.title("Email Spam Classifier")
+st.title("Email Spam Classification")
 
 input_sms = st.text_area("Enter the message")
 
